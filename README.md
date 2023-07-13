@@ -31,14 +31,17 @@ Sigue estos pasos para crear un entorno virtual en Django:
 2. Asegúrate de tener instalado `virtualenv`. Si no lo tienes instalado, puedes hacerlo ejecutando el siguiente comando (requiere tener `pip` instalado):
 
 ```sh
-	pip install virtualenv
+pip install virtualenv
 ```
+
 ```sh
-	virtualenv nombre_entorno
+virtualenv nombre_entorno
 ```
+
 ```sh
-	pip install -r requirements.txt
+pip install -r requirements.txt
 ```
+
 > Recuerda ejecutar todo en el virtualenv. Si no ves un prefijo `(myvenv)` en tu consola tienes que activar tu virtualenv. Explicamos cómo hacerlo en el capítulo de **Instalación de Django** en la sección **Trabajar con virtualenv**. Basta con escribir `myvenv\Scripts\activate` en Windows o `source myvenv/bin/activate` en Mac OS / Linux.
 
 	(myvenv) ~/djangoproyecto$ django-admin startproject mysite .
