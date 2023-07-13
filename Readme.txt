@@ -1,5 +1,5 @@
 # Prueba Ospedale
-> Ddescripción corta del proyecto Crud para rol, eps y usuario
+> Descripción corta del proyecto Crud para rol, eps y usuario
 
 ## Construido con 🛠️
 Herramientas utilizadas
@@ -93,7 +93,8 @@ STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'static' 
 ```
 
-## (Obligatorio) Configurar una base de datos
+## (Opcional) Configurar una base de datos
+**Nota** Para este proyecto recomiendo usar mysql pero tambien se puede con cualquier Base de Datos Relacional
 
 Hay una gran variedad de opciones de bases de datos para almacenar los datos de tu sitio. Utilizaremos la que viene por defecto, `sqlite3`.
 
@@ -168,7 +169,11 @@ npm install @angular/cli
 ```
 
 ## ( Obligatorio ) 
-Iniciar proyecto o ejecutarlo con un navegador predeterminado. Navegue a `http://localhost:4200/`. La aplicación se recargará automáticamente si cambia cualquiera de los archivos de origen.
+Iniciar proyecto o ejecutarlo con un navegador predeterminado.
+Navegue a 
+> http://localhost:4200/ 
+
+La aplicación se recargará automáticamente si cambia cualquiera de los archivos de origen.
 
 ```sh
 ng serve -open or ng s -o
