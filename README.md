@@ -23,7 +23,7 @@ gitclone https://github.com/david99cartagena/PruebaOspedale.git
 
 ## Backend
 
-### Crear un entorno virtual en Django
+## (Obligatorio) Crear un entorno virtual en Django
 
 Sigue estos pasos para crear un entorno virtual en Django:
 
@@ -93,7 +93,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'static' 
 ```
 
-## Configurar una base de datos
+## (Obligatorio) Configurar una base de datos
 
 Hay una gran variedad de opciones de bases de datos para almacenar los datos de tu sitio. Utilizaremos la que viene por defecto, `sqlite3`.
 
