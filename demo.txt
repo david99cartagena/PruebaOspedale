@@ -1,24 +1,11 @@
-backend
-python version
-django version
-
-frontend
-angular version
-type Scripts version
-boostrap version
-
-mysql workbench
-postman
-visual studio code
-git
-navegador
-
 c:/DjangoCrud/virtual/Scripts/activate.bat
 
+pip install virtualenv
+virtualenv nombre_entorno
+pip install -r requirements.txt
 python manage.py makemigrations
 python manage.py migrate
 python manage.py runserver
-
 
 pip install corsheaders
 pip install djangorestframework
@@ -29,9 +16,8 @@ ng new Frontend
 ng g c eps
 ng g c eps/show-eps
 ng g s
+ng s --port=4200
 
 npm install
-django
-python --version
-
-virtualenv nombre_entorno
+ng serve
+ng serve --port=4200

@@ -5,17 +5,19 @@ Herramientas utilizadas
 
 - [node. js] - version v18.15.0, Entorno en tiempo de ejecución multiplataforma para la capa del servidor ( en el lado del servidor )
 - [Angular] - version 15.2.7, Framework de Frontend
-- [typescript] - version 4.9.5
+- [Typescript] - version 4.9.5
+- [Bootstrap] - version 4.0
 
 - [Python] 3.9.13, Python es un lenguaje de programación de alto nivel, interpretado y de propósito general. Se destaca por su sintaxis clara y legible, lo que facilita la escritura y comprensión del código.
 - [Django] 4.2, Framework de Backend
 
+- [VisualStudioCode] Editor de Codigo
 - [Git] - version 2.40.0, Sistema de control de versiones
 - [MySQL Workbench] 8.0.32, Workbench, también conocido como MySQL Workbench, es una herramienta de diseño y administración visual para bases de datos MySQL
 - [Postman] 10.16.0, Postman es una herramienta de colaboración y prueba de API que permite a los desarrolladores probar, documentar y compartir fácilmente APIs.
 
 # (Obligatorio) usar  
-> git clone 
+> git clone https://github.com/david99cartagena/PruebaOspedale.git
 
 ## Backend
 
