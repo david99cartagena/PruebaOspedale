@@ -234,7 +234,7 @@ ng generate component mi-componente
 
 ---
 
-## Imagenes del aplicacion
+## 📸 Imagenes de la Aplicacion
 
 - **Creacion y preparacion de Backend**
   ![](https://raw.githubusercontent.com/david99cartagena/PruebaOspedale/main/Media/Screenshot_1.png)
