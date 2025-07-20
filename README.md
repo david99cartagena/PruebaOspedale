@@ -170,73 +170,87 @@ Abre tu navegador y visita:
 
 ---
 
-## Frontend
+## 🖼️ Configuración del Frontend (Angular)
 
-(Obligatorio) Instalar dependecias
+### 🔹 Instalar dependencias (obligatorio)
+
 ```sh
 npm install
 ```
 
-Versiones de angular y node js
+### 🔹 Verificar versiones de Node.js y Angular
+
 ```sh
-node -v o node –version
+node -v          # o node --version
 ```
 
 ```sh
-ng version
+ng version       # muestra la versión de Angular CLI
 ```
 
-( Opcional ) Instalar angular cli
-```sh
-npm install @angular/cli
-```
-
-## ( Obligatorio ) 
-Iniciar proyecto o ejecutarlo con un navegador predeterminado.
-Navegue a 
-> http://localhost:4200/ 
-
-La aplicación se recargará automáticamente si cambia cualquiera de los archivos de origen.
+### 🔹 Instalar Angular CLI (opcional)
 
 ```sh
-ng serve -open or ng s -o
+npm install -g @angular/cli
 ```
 
-( Opcional ) Iniciar proyecto con x puerto
+### 🔹 Ejecutar la aplicación (obligatorio)
+
+Para iniciar el proyecto y abrirlo en el navegador:
+
 ```sh
-ng serve
-ng serve -o --port=4300
-ng serve -o --port=4300
+ng serve -open
 ```
 
-Generar Artefactos o Componentes de una App Angular
+```sh
+ng s -o # abreviada
+```
+
+Esto abrirá:
+
+> [http://localhost:4200](http://localhost:4200)
+
+La aplicación se recargará automáticamente al detectar cambios en los archivos fuente.
+
+### 🔹 Ejecutar en un puerto diferente (opcional)
+
+```sh
+ng serve --open --port=4300
+```
+
+```sh
+ng s -o --p=4300 # abreviada
+```
+
+### 🔹 Generar componentes u otros artefactos
+
 ```sh
 ng generate component mi-componente
 ```
 
+## 📌 Notas finales
+
+- El frontend se sirve por defecto en el puerto `4200` a menos que se indique otro.
+
+---
+
 ## Imagenes del aplicacion
 
-> Creacion y preparacion de Backend
-![](https://raw.githubusercontent.com/david99cartagena/PruebaOspedale/main/Media/Screenshot_1.png)
+- **Creacion y preparacion de Backend**
+  ![](https://raw.githubusercontent.com/david99cartagena/PruebaOspedale/main/Media/Screenshot_1.png)
+- **Creacion y preparacion de Frontend**
+  ![](https://raw.githubusercontent.com/david99cartagena/PruebaOspedale/main/Media/Screenshot_12.png)
 
-> Creacion y preparacion de Frontend
-![](https://raw.githubusercontent.com/david99cartagena/PruebaOspedale/main/Media/Screenshot_12.png)
+- **Data de Rol Eps y Usuario desde Postman**
+  ![](https://raw.githubusercontent.com/david99cartagena/PruebaOspedale/main/Media/Screenshot_2.png)
+  ![](https://raw.githubusercontent.com/david99cartagena/PruebaOspedale/main/Media/Screenshot_3.png)
+  ![](https://raw.githubusercontent.com/david99cartagena/PruebaOspedale/main/Media/Screenshot_4.png)
 
-> Data de Rol Eps y Usuario desde Postman
-![](https://raw.githubusercontent.com/david99cartagena/PruebaOspedale/main/Media/Screenshot_2.png)
+- **Data en Base de datos MySQL Workbench**
+  ![](https://raw.githubusercontent.com/david99cartagena/PruebaOspedale/main/Media/Screenshot_11.png)
 
-![](https://raw.githubusercontent.com/david99cartagena/PruebaOspedale/main/Media/Screenshot_3.png)
-
-![](https://raw.githubusercontent.com/david99cartagena/PruebaOspedale/main/Media/Screenshot_4.png)
-
-> Data en Base de datos MySQL Workbench
-![](https://raw.githubusercontent.com/david99cartagena/PruebaOspedale/main/Media/Screenshot_11.png)
-
-> Visualizacion desde un navegador FireFox
-![](https://raw.githubusercontent.com/david99cartagena/PruebaOspedale/main/Media/Screenshot_6.png)
-
-![](https://raw.githubusercontent.com/david99cartagena/PruebaOspedale/main/Media/Screenshot_7.png)
-
-![](https://raw.githubusercontent.com/david99cartagena/PruebaOspedale/main/Media/Screenshot_8.png)
-
-![](https://raw.githubusercontent.com/david99cartagena/PruebaOspedale/main/Media/Screenshot_9.png)
+- **Visualizacion desde un navegador FireFox**
+  ![](https://raw.githubusercontent.com/david99cartagena/PruebaOspedale/main/Media/Screenshot_6.png)
+  ![](https://raw.githubusercontent.com/david99cartagena/PruebaOspedale/main/Media/Screenshot_7.png)
+  ![](https://raw.githubusercontent.com/david99cartagena/PruebaOspedale/main/Media/Screenshot_8.png)
+  ![](https://raw.githubusercontent.com/david99cartagena/PruebaOspedale/main/Media/Screenshot_9.png)
