@@ -1,104 +1,116 @@
 # Prueba Ospedale
-> Descripción corta del proyecto Crud para rol, eps y usuario
 
-## Construido con 🛠️
-Herramientas utilizadas
+**Descripción corta del proyecto:**
+Sistema CRUD para gestión de **Roles**, **EPS** y **Usuarios**, desarrollado como prueba técnica.
 
-- [node. js] - version v18.15.0, Entorno en tiempo de ejecución multiplataforma para la capa del servidor ( en el lado del servidor )
-- [Angular] - version 15.2.7, Framework de Frontend
-- [Typescript] - version 4.9.5
-- [Bootstrap] - version 4.0
-- [Python] - version 3.9.13, Python es un lenguaje de programación de alto nivel, interpretado y de propósito general. Se destaca por su sintaxis clara y legible, lo que facilita la escritura y comprensión del código.
-- [Django] - version 4.2, Framework de Backend
-- [VisualStudioCode] Editor de Codigo
-- [Git] - version 2.40.0, Sistema de control de versiones
-- [MySQL Workbench] - version 8.0.32, Workbench, también conocido como MySQL Workbench, es una herramienta de diseño y administración visual para bases de datos MySQL
-- [Postman] - version 10.16.0, Postman es una herramienta de colaboración y prueba de API que permite a los desarrolladores probar, documentar y compartir fácilmente APIs.
+---
 
-# (Obligatorio) usar  
+## 🚀 Tecnologías Utilizadas
+
+| Herramienta        | Versión  | Descripción                                                |
+| ------------------ | -------- | ---------------------------------------------------------- |
+| Node.js            | v18.15.0 | Entorno de ejecución para JavaScript del lado del servidor |
+| Angular            | 15.2.7   | Framework para aplicaciones web frontend                   |
+| TypeScript         | 4.9.5    | Superset de JavaScript con tipado estático                 |
+| Bootstrap          | 4.0      | Framework CSS para diseño responsivo                       |
+| Python             | 3.9.13   | Lenguaje de programación interpretado                      |
+| Django             | 4.2      | Framework web backend para Python                          |
+| Visual Studio Code | —        | Editor de código fuente                                    |
+| Git                | 2.40.0   | Sistema de control de versiones                            |
+| MySQL Workbench    | 8.0.32   | Herramienta visual para diseño y administración de MySQL   |
+| Postman            | 10.16.0  | Herramienta para pruebas y documentación de APIs           |
+
+---
+
+## 📄 Clonar el Proyecto
 
 ```sh
-gitclone https://github.com/david99cartagena/PruebaOspedale.git
+git clone https://github.com/david99cartagena/PruebaOspedale.git
 ```
 
-## Backend
+---
 
-## (Obligatorio) Crear un entorno virtual en Django
+## 🖥️ Configuración del Backend (Django)
 
-Sigue estos pasos para crear un entorno virtual en Django:
+### 🔹 Crear entorno virtual
 
-1. Abre una terminal o línea de comandos en el directorio raíz de tu proyecto Django.
-2. Asegúrate de tener instalado `virtualenv`. Si no lo tienes instalado, puedes hacerlo ejecutando el siguiente comando (requiere tener `pip` instalado):
+1. Instala `virtualenv` si no lo tienes:
 
 ```sh
 pip install virtualenv
 ```
 
+2. Crea el entorno virtual:
+
 ```sh
 virtualenv nombre_entorno
 ```
+
+3. Activa el entorno virtual:
+
+- **Windows**:
+  ```sh
+  nombre_entorno\Scripts\activate
+  ```
+- **Linux/Mac**:
+  ```sh
+  source nombre_entorno/bin/activate
+  ```
+
+4. Instala dependencias:
 
 ```sh
 pip install -r requirements.txt
 ```
 
-> Recuerda ejecutar todo en el virtualenv. Si no ves un prefijo `(myvenv)` en tu consola tienes que activar tu virtualenv. Explicamos cómo hacerlo en el capítulo de **Instalación de Django** en la sección **Trabajar con virtualenv**. Basta con escribir `myvenv\Scripts\activate` en Windows o `source myvenv/bin/activate` en Mac OS / Linux.
+---
 
-	(myvenv) ~/djangoproyecto$ django-admin startproject mysite .
+### 🔹 Estructura del proyecto
 
-> El punto `.` es crucial porque le dice al script que instale Django en el directorio actual (para el cual el punto `.` sirve de abreviatura).
+```
+djangoproyecto/
+│
+├───nombre_entorno/       # ✅ Entorno virtual Python (no forma parte del repositorio)
+├───mysite/               # ✅ Directorio principal del proyecto Django
+│   ├── __init__.py       # Marca el directorio como un paquete de Python
+│   ├── asgi.py           # Configuración para ASGI (deploy asincrónico)
+│   ├── settings.py       # Configuración general del proyecto (bases de datos, apps, etc.)
+│   ├── urls.py           # URLs principales del proyecto
+│   └── wsgi.py           # Configuración para WSGI (deploy tradicional)
+├── manage.py             # ✅ Script de utilidad para manejar el proyecto (comandos Django)
+└── requirements.txt      # ✅ Lista de dependencias para instalar con pip
+```
 
-> **Nota** Cuando escribas los comandos de arriba acuérdate de que sólo tienes que escribir la parte que empieza por `django-admin`. La parte de `(myvenv) ~/djangoproyecto$` que mostramos aquí es sólo un ejemplo del mensaje que aparecerá en tu línea de comandos.
+---
 
-    djangoproyecto
+### 🔹 Configuraciones recomendadas
 
-    ├───mysite
-	│        __init__.py
-	│        asgi.py
-    │        settings.py
-    │        urls.py
-    │        wsgi.py
-    ├───nombre_entorno
-	├───manage.py
-    └───requirements.txt
+Edita `settings.py`:
 
-> **Nota**: en tu estructura de directorios, también verás el directorio `myvenv` que creamos anteriormente.
-
-`manage.py` es un script que ayuda con la administración del sitio. Con él podremos iniciar un servidor web en nuestro ordenador sin necesidad de instalar nada más, entre otras cosas.
-
-El archivo `settings.py` contiene la configuración de tu sitio web.
-
-Recuerdas cuando hablamos de una cartera que debía comprobar dónde entregar una carta? El archivo `urls.py` contiene una lista de los patrones utilizados por `urlresolver`.
-
-## Cambiar la configuración
-
-Vamos a hacer algunos cambios en `mysite/settings.py`. Abre el archivo usando el editor de código que has instalado anteriormente.
-
-**Nota**: Ten en cuenta que `settings.py` es un archivo normal, como cualquier otro. Puedes abrirlo con el editor de texto.
-
-En `settings.py`, encuentra la línea que contiene `TIME_ZONE` y modifícala para elegir tu zona horaria. Por ejemplo:
-
-Un código de idioma tiene dos partes: el idioma, p.ej. `en` para inglés. Django viene con muchas traducciones preparadas.
-
-Si quieres un idioma diferente, cambia el código de idioma cambiando la siguiente línea:
+- Idioma
 
 ```python
 LANGUAGE_CODE = 'es'
 ```
 
-También tenemos que añadir una ruta para archivos estáticos. (Veremos todo acerca de archivos estáticos y CSS más adelante.) Ve al *final* del archivo, y justo debajo de la entrada `STATIC_URL`, añade una nueva llamada `STATIC_ROOT`:
+- Zona horaria
+
+```python
+TIME_ZONE = 'America/Bogota'
+```
+
+- Archivos estáticos
 
 ```python
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'static' 
+STATIC_ROOT = BASE_DIR / 'static'
 ```
 
-## (Opcional) Configurar una base de datos
-**Nota** Para este proyecto recomiendo usar mysql pero tambien se puede con cualquier Base de Datos Relacional
+---
 
-Hay una gran variedad de opciones de bases de datos para almacenar los datos de tu sitio. Utilizaremos la que viene por defecto, `sqlite3`.
+### 🔹 Base de datos
 
-Esta ya está configurado en esta parte de tu archivo `mysite/settings.py`:
+Por defecto se utiliza SQLite:
 
 ```python
 DATABASES = {
@@ -109,13 +121,23 @@ DATABASES = {
 }
 ```
 
-Recuerda que el comando `makemigrations` se utiliza para generar las migraciones en base a los cambios realizados en los modelos de tu aplicación. Una vez generadas las migraciones, puedes aplicarlas a la base de datos utilizando el comando `migrate`.
+> También puedes usar MySQL si lo prefieres.
+
+---
+
+### 🔹 Migraciones
+
+Genera y aplica las migraciones:
 
 ```sh
 python manage.py makemigrations
 ```
 
-Para crear una base de datos para nuestro blog, ejecutemos lo siguiente en la consola: `python manage.py migrate` (necesitamos estar en el directorio de `djangoproyecto` que contiene el archivo `manage.py`). Si eso va bien, deberías ver algo así:
+```sh
+python manage.py migrate
+```
+
+Si todo esta bien, deberías ver algo así:
 
     (myvenv) ~/djangoproyecto$ python manage.py migrate
     Operations to perform:
@@ -125,27 +147,28 @@ Para crear una base de datos para nuestro blog, ejecutemos lo siguiente en la co
       Applying contenttypes.0001_initial... OK
       Applying auth.0001_initial... OK
       Applying admin.0001_initial... OK
-      Applying admin.0002_logentry_remove_auto_add... OK
-      Applying contenttypes.0002_remove_content_type_name... OK
-      Applying auth.0002_alter_permission_name_max_length... OK
-      Applying auth.0003_alter_user_email_max_length... OK
-      Applying auth.0004_alter_user_username_opts... OK
-      Applying auth.0005_alter_user_last_login_null... OK
-      Applying auth.0006_require_contenttypes_0002... OK
-      Applying auth.0007_alter_validators_add_error_messages... OK
-      Applying auth.0008_alter_user_username_max_length... OK
-      Applying auth.0009_alter_user_last_name_max_length... OK
-      Applying sessions.0001_initial... OK
 
-## Iniciar el servidor
+---
 
-Debes estar en el directorio que contiene el archivo `manage.py` (en la carpeta `djangoproyecto`). En la consola, podemos iniciar el servidor web ejecutando `python manage.py runserver`:
+### 🔹 Iniciar servidor
 
-    (myvenv) ~/djangoproyecto$ python manage.py runserver
+Ejecuta el siguiente comando:
 
-Ahora necesitas revisar que tu website se está ejecutando. Abre tu navegador (Firefox, Chrome, Safari, Internet Explorer, o cualquiera que uses) y escribe esta dirección:
+```sh
+python manage.py runserver
+```
 
-> http://127.0.0.1:8000/
+Abre tu navegador y visita:
+
+> [http://127.0.0.1:8000](http://127.0.0.1:8000)
+
+## 📌 Notas finales
+
+- `manage.py` es el archivo para la gestión de comandos del proyecto.
+- `urls.py` define las rutas del sitio.
+- `settings.py` incluye toda la configuración del entorno.
+
+---
 
 ## Frontend
 
